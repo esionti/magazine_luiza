@@ -1,5 +1,5 @@
 properties([
-  [$class: 'JiraProjectProperty'],
+  
   parameters(
     [
       choice(
