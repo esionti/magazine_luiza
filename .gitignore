@@ -7,6 +7,4 @@
 debug.log
 Gemfile.lock
 /code_analyzer/
-/screenshots/
-/allure-results/
 rubocop.yml
