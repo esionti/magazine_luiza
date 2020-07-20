@@ -54,11 +54,7 @@ pipeline{
       }
     }
     stage('Executando testes') {
-<<<<<<< HEAD
-    agent { docker { image 'ruby:latest' } }
-=======
     agent any
->>>>>>> a9ffd060b1824571aed86d39fd59d0e156020029
     steps {
     script {
       try {
