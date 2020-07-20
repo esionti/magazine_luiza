@@ -1,0 +1,17 @@
+# Reports
+reports: --format pretty --format AllureCucumber::CucumberFormatter --out allure-results
+
+# Brands e Environments
+magluiza_prd: HOST='https://www.magazineluiza.com.br/'
+magluiza_hlg: HOST='https://www.magazineluiza-hlg.com.br/'
+
+## Execution device
+desktop: DEVICE=desktop
+
+# Graphic mode
+headless: GRAPHIC_MODE=headless
+graphic:  GRAPHIC_MODE=graphic
+
+# Execution
+remote: MODE=remote
+local:  MODE=local
