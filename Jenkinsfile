@@ -48,7 +48,7 @@ pipeline{
             submoduleCfg: [], 
             userRemoteConfigs: [[
                 credentialsId: 'jenkins-credentials', 
-                url: 'http://bitbucket.viavarejo.com.br/scm/mat/aut-mktp-front-pas.git'
+                url: 'https://github.com/esionti/magazine_luiza.git'
             ]]
         ])
       }
@@ -56,7 +56,7 @@ pipeline{
     stage('Executando testes') {
       agent { 
           dockerfile {
-              reuseNode true
+              any
           }
       }
     steps {
