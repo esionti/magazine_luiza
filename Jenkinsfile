@@ -54,7 +54,11 @@ pipeline{
       }
     }
     stage('Executando testes') {
-    agent { any }
+    agent {
+       docker {
+           image "qaninja/rubywd"
+       }
+   }
     steps {
     script {
       try {
