@@ -65,11 +65,6 @@ pipeline{
       }  
     }
       }
-    }
-    stage('Gerando relatórios') {
-      steps {
-        allure includeProperties: false, jdk: 'jdk8', results: [[path: 'allure-results']]
-      }
-    }
+    }    
   }
 }

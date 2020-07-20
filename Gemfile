@@ -8,5 +8,5 @@ gem 'rubocop', require: false
 gem 'selenium-webdriver'
 gem 'site_prism'
 gem 'ffi'
-gem 'allure-cucumber'
+gem 'report_builder'
 gem 'uuid'

@@ -1,5 +1,7 @@
 # Reports
-reports: --format pretty --format AllureCucumber::CucumberFormatter --out allure-results
+reports: -p html_report -p json_report
+html_report: --format html -o reports/features_report.html
+json_report: --format json -o reports/features_report.json
 
 # Brands e Environments
 magluiza_prd: HOST='https://www.magazineluiza.com.br/'
@@ -15,3 +17,7 @@ graphic:  GRAPHIC_MODE=graphic
 # Execution
 remote: MODE=remote
 local:  MODE=local
+
+# Template
+default: -p pretty
+pretty: --format pretty
