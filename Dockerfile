@@ -1,4 +1,4 @@
-ROM ruby:2.5-alpine
+FROM ruby:2.5-alpine
 
 RUN apk update && apk add --virtual build-dependencies build-base gcc wget
 
