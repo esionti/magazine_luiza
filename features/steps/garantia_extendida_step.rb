@@ -4,7 +4,6 @@ end
 
 E('seleciono o serviço de garantia extendia {string}') do |garantia|
   @app.garantia_ext.add_garantia(garantia)
-
 end
 
 E('clico em continuar') do

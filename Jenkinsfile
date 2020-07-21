@@ -1,5 +1,4 @@
-properties([
-  
+properties([  
   parameters(
     [
       choice(
@@ -38,7 +37,7 @@ properties([
 pipeline{
   agent any
   stages {
-    stage('Clonando repositório principal') {
+    stage('Clonando repositorio principal') {
       steps {
         checkout([
             $class: 'GitSCM', 

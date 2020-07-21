@@ -8,3 +8,6 @@ debug.log
 Gemfile.lock
 /code_analyzer/
 rubocop.yml
+.html
+.json
+/reports/

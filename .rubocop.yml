@@ -1,8 +1,9 @@
 AllCops:
   Exclude:
-    - 'aut-api-rest/**/*'
     - Rakefile
     - Gemfile
+    - features/support/utils.rb
+    - features/support/hooks.rb
 
 Style/FrozenStringLiteralComment:
   Enabled: false

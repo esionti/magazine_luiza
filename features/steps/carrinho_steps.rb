@@ -1,16 +1,16 @@
 Quando('adiciona uma produto de minha escolha do carrinho sem garantia') do |table|
-  table.hashes.each do |row|  
+  table.hashes.each do |row|
     step "busco e seleciono um '#{row[:produto]}'"
-    step 'clico em adicionar à sacola'    
-    step "não seleciono o serviço de garantia extendia"
+    step 'clico em adicionar à sacola'
+    step 'não seleciono o serviço de garantia extendia'
     step 'clico em continuar'
   end
 end
 
 Quando('adiciona uma produto de minha escolha do carrinho com garantia') do |table|
-  table.hashes.each do |row|  
+  table.hashes.each do |row|
     step "busco e seleciono um '#{row[:produto]}'"
-    step 'clico em adicionar à sacola'    
+    step 'clico em adicionar à sacola'
     step "seleciono o serviço de garantia extendia '#{row[:garantia]}'"
     step 'clico em continuar'
   end

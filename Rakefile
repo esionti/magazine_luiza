@@ -27,9 +27,9 @@ task :test, :brand_environment, :exec_device, :exec_mode, :graphic_mode, :tags d
 end
 
 def check_params(brand_environment, exec_device, exec_mode, graphic_mode, tags)
-  raise "Bandeira/Ambiente não suportados, obtido: #{brand_environment.inspect}."                                  unless ['magluiza_prd', 'magluiza_hlg'].include? brand_environment
+  raise "Ambiente não suportados, obtido: #{brand_environment.inspect}."                                  unless ['magluiza_prd', 'magluiza_hlg'].include? brand_environment
 
-  raise "Dispositivo não suportado, obtido: #{exec_device.inspect}"                                                unless ['mobile','desktop'].include? exec_device
+  raise "Dispositivo não suportado, obtido: #{exec_device.inspect}"                                                unless ['desktop'].include? exec_device
 
   raise "O modo gráfico precisa ser preenchido com headless ou graphic, obtido: #{graphic_mode.inspect}"           unless ['headless', 'graphic'].include? graphic_mode
 

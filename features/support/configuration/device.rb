@@ -4,7 +4,7 @@ module Configuration
 
     def initialize(device, graphic_mode)
       @options = Selenium::WebDriver::Chrome::Options.new
-      mobile_options   if device       == 'mobile'
+      #mobile_options   if device       == 'mobile'
       headless_options if graphic_mode == 'headless'
       default_options
     end
@@ -13,10 +13,10 @@ module Configuration
       @options.options
     end
 
-    def mobile_options
-      mobile_emulation = { user_agent: 'Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1' }
-      @options.add_emulation(mobile_emulation)
-    end
+    #def mobile_options
+    #  mobile_emulation = { user_agent: 'Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1' }
+    #  @options.add_emulation(mobile_emulation)
+    #end
 
     def headless_options
       @options.add_argument('headless')

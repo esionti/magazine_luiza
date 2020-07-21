@@ -21,5 +21,5 @@ end
 Capybara.configure do |config|
   config.default_driver = :site_prism
   config.default_max_wait_time = 20
-  config.app_host = ENV['DEVICE'] == 'desktop' ? ENV['HOST'] : ENV['MHOST']
+  config.app_host = ENV['HOST']
 end

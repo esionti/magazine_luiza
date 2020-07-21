@@ -10,14 +10,13 @@ class GarantiaExtendida < SitePrism::Page
   elements :valor_parcelas_um, '.table-warranty__tr .js-warranty-one-parcel-price'
   elements :valor_parcelas_dois, '.table-warranty__tr .js-warranty-two-parcel-price'
 
-
   def nao_add_garantia
     wait_until_garantia_texto_container_visible
     sem_garantia.click
-    subtotal_sem_garantia
+    valor_sem_garantia
   end
 
-  def add_garantia garantia
+  def add_garantia(garantia)
     wait_until_garantia_texto_container_visible
     case garantia
       when '1_ano'
@@ -29,7 +28,7 @@ class GarantiaExtendida < SitePrism::Page
         @parcelas = parcelas_dois_anos.first.text
         @valor_parcela = valor_parcelas_dois.first.text
       else
-         tracing_error "Erro! Garantia de #{garantia} inválida. Escolha entre '1_ano' e '2_ano'"
+        tracing_error "Erro! Garantia de #{garantia} inválida. Escolha entre '1_ano' e '2_ano'"
     end
     subtotal_com_garantia(@parcelas, @valor_parcela)
   end
@@ -38,22 +37,25 @@ class GarantiaExtendida < SitePrism::Page
     botao_continuar.click
   end
 
-  def subtotal_sem_garantia
+  def subtotal_produtos
     @produto_subtotal = subtotal.text
     Utils.SITE_PRICE_TO_FLOAT(@produto_subtotal)
+  end
+
+  def valor_sem_garantia
+    subtotal_produtos
     @produto_subtotal == $preco_produto
   end
 
   def subtotal_com_garantia(parcelas, valor_parcela)
     valor_com_garantia(parcelas, valor_parcela)
-    @produto_subtotal = subtotal.text
-    Utils.SITE_PRICE_TO_FLOAT(@produto_subtotal)
+    subtotal_produtos
     $valor_subtotal_garantia == @produto_subtotal.to_f.round(2)
   end
 
   def valor_com_garantia(parcelas, valor_parcela)
-    Utils.SITE_PRICE_TO_FLOAT(valor_parcela)    
-    $valor_garantia = parcelas.to_i * valor_parcela.to_f    
+    Utils.SITE_PRICE_TO_FLOAT(valor_parcela)
+    $valor_garantia = parcelas.to_i * valor_parcela.to_f
     $valor_subtotal_garantia = $preco_produto.to_f + $valor_garantia.to_f
   end
 end

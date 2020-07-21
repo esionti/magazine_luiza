@@ -18,7 +18,7 @@ gem install bundler --force
 ### Instalação
 Clone o projeto utilizando o comando
 ```
-git clone http://bitbucket.viavarejo.com.br/scm/mat/aut-mktp-front-onboarding.git
+git clone https://github.com/esionti/magazine_luiza.git
 ```
 Execute o comando abaixo para realizar a instalação das dependencias:
 ```
