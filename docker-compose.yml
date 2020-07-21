@@ -2,7 +2,6 @@ version: '2'
 services:
   app:
     build: .
-    command: rake test[brand_environment, exec_device, exec_mode, graphic_mode, tags]
     volumes:
       - .:/home/vv
     ports:
