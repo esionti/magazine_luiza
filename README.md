@@ -12,7 +12,7 @@ Esta stack utiliza as seguintes ferramentas:
 Necessário instalar o [Ruby](https://rubyinstaller.org/) na versão 2.5.x e em seguida rodar os comandos através terminal:
 
 ```
-gem install bundler --force
+gem install bundler
 ```
 
 ### Instalação
@@ -35,3 +35,9 @@ exec_device - desktop/mobile
 exec_mode - local/remote (Jenkins|máquina local/Zalenium)
 graphic_mode - graphic/headless (com renderização em tela/sem renderização em tela) *mesmo em modo headless os prints para reports funcionam
 tags - conforme tageamento das features no projeto
+
+# Executando os Testes no Docker
+Após a instalação e configuração do Docker, vamos executar os testes. 
+```
+docker-compose build
+docker-compose run app bundle exec rake test[brand_environment, exec_device, exec_mode, graphic_mode, tags]
