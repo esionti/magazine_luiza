@@ -35,5 +35,5 @@ def check_params(brand_environment, exec_device, exec_mode, graphic_mode, tags)
 
   raise "Tipo de execução não suportado, precisa ser preenchido com remote ou local, obtido: #{exec_mode.inspect}" unless ['remote', 'local'].include? exec_mode
 
-  message 'Nenhuma tag informada, todos os testes serão executados.'                                                  unless tags
+  puts 'Nenhuma tag informada, todos os testes serão executados.'                                                  unless tags
 end
