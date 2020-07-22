@@ -3,8 +3,8 @@ class App
     Home.new
   end
 
-  def search
-    Search.new
+  def busca_produto
+    BuscarProduto.new
   end
 
   def produto_detalhes

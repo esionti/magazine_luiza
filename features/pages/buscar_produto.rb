@@ -1,4 +1,4 @@
-class Search < SitePrism::Page
+class BuscarProduto < SitePrism::Page
   element :produtos_total_container, '.neemu-products-container.nm-view-type-grid'
   elements :seleciona_produto, '.nm-product-item'
 
