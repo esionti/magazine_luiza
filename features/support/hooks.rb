@@ -22,7 +22,7 @@ at_exit do
     config.input_path = 'reports/features_report.json'
     config.report_path = 'reports/features_report'
     config.report_types = [:html]
-    config.report_title = 'Magazine Luiza - Relatório'
+    config.report_title = 'Magazine Luiza - Relatorio'
     config.color = 'green'
     config.compress_images = true
   end
