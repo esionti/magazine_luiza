@@ -15,7 +15,6 @@ headless: GRAPHIC_MODE=headless
 graphic:  GRAPHIC_MODE=graphic
 
 # Execution
-remote: MODE=remote
 local:  MODE=local
 
 # Template

@@ -1,7 +1,7 @@
 require 'cucumber/rake/task'
 require 'yaml'
 
-desc "Performs the given acceptance testing, remotely or locally under a brand environment simulating a given device.
+desc "Performs the given acceptance testing, locally under a brand environment simulating a given device.
 Defined profiles in cucumber.yml: \n * #{YAML.load_file('cucumber.yml').keys.join("\n * ")}"
 task :test, :brand_environment, :exec_device, :exec_mode, :graphic_mode, :tags do |_, args|
   brand_environment = args[:brand_environment]
@@ -33,7 +33,7 @@ def check_params(brand_environment, exec_device, exec_mode, graphic_mode, tags)
 
   raise "O modo gráfico precisa ser preenchido com headless ou graphic, obtido: #{graphic_mode.inspect}"           unless ['headless', 'graphic'].include? graphic_mode
 
-  raise "Tipo de execução não suportado, precisa ser preenchido com remote ou local, obtido: #{exec_mode.inspect}" unless ['remote', 'local'].include? exec_mode
+  raise "Tipo de execução não suportado, precisa ser preenchido local, obtido: #{exec_mode.inspect}" unless ['local'].include? exec_mode
 
   puts 'Nenhuma tag informada, todos os testes serão executados.'                                                  unless tags
 end

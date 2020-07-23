@@ -17,7 +17,7 @@ properties([
         name: 'graphic_mode'
         ),
       choice(
-        choices: ['remote', 'local'],
+        choices: ['local'],
         description: 'Executar o teste no Zalenium ou no Jenkins.',
         name: 'exec_mode'
         ),
@@ -44,9 +44,8 @@ pipeline{
             branches: [[name: "$branch"]], 
             doGenerateSubmoduleConfigurations: false, 
             extensions: [], 
-            submoduleCfg: [], 
-            userRemoteConfigs: [[
-                credentialsId: 'jenkins-credentials', 
+            submoduleCfg: []            
+                
                 url: 'https://github.com/esionti/magazine_luiza.git'
             ]]
         ])

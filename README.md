@@ -32,7 +32,7 @@ rake test[brand_environment, exec_device, exec_mode, graphic_mode, tags]
 ```
 brand_environment - magluiza_hlg/magluiza_prd
 exec_device - desktop/mobile
-exec_mode - local/remote (Jenkins|máquina local/Zalenium)
+exec_mode - local
 graphic_mode - graphic/headless (com renderização em tela/sem renderização em tela) *mesmo em modo headless os prints para reports funcionam
 tags - conforme tageamento das features no projeto
 
