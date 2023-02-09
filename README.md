@@ -1,5 +1,5 @@
 # Front-Onboarding - Testes/Front 
-Projeto com estrutura base para automação dos testes de Front-end para todos os times da Via Varejo. 
+Projeto com estrutura base para automação dos testes de Front-end com linguagem Ruby. 
 
 ## Inicialização
 Esta stack utiliza as seguintes ferramentas:
